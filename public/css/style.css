@@ -1,0 +1,360 @@
+@import url('https://fonts.googleapis.com/css2?family=Crushed&family=Dancing+Script&family=Kablammo&family=Piazzolla:ital,opsz,wght@1,8..30,200;1,8..30,300;1,8..30,400;1,8..30,900&family=Quicksand:wght@300&family=Shadows+Into+Light&family=Ubuntu:wght@300&display=swap');
+
+* {
+    font-family: 'Piazzolla', serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color:#d5d9eb
+}
+
+:root {
+    --main-bg: #1e272e;
+    --main-color: #0097e6;
+}
+
+.main_menu {
+    background-color: var(--main-bg);
+}
+
+.navbar {
+    color: #fff;
+    background-color: var(--main-bg);
+    padding: 1rem 0;
+}
+
+.navbar a {
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+.navbar a:hover {
+    color: var(--main-color);
+}
+
+.navbar-toggler {
+    background-color: gray
+}
+
+.navbar li {
+    margin-left: 2rem;
+}
+
+.fa-snowflake {
+    color: var(--main-color);
+    transition: all linear;
+    animation: rot 2s linear infinite;
+}
+
+@keyframes rot {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* 404 Error */
+.page404 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.page404 button {
+    margin-top: 10px;
+    border: none;
+    padding: 0.6rem 1.3rem;
+    font-size: 1.4rem;
+    border-radius: 2rem;
+    text-transform: uppercase;
+    box-shadow: 0 8px 6px -6px #000;
+}
+
+.page404 button:hover {
+    box-shadow: 0 8px 6px -6px var(--main-color);
+}
+
+/* Main Header */
+.main_header_left {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.main_header_left p {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+h1 span {
+    color: var(--main-color);
+}
+
+.main_header_left button {
+    margin-top: 10px;
+    border: none;
+    padding: 0.6rem 1.3rem;
+    font-size: 1.4rem;
+    border-radius: 2rem;
+    text-transform: uppercase;
+    box-shadow: 0 8px 6px -6px #000;
+}
+
+.main_header_left button:hover {
+    box-shadow: 0 8px 6px -6px var(--main-color);
+}
+
+.main_header_right {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-size {
+    height: 25em;
+    border-radius: 25px;
+    margin-bottom: 20px;
+}
+
+/* temperature */
+.temp_form {
+    width: 60%;
+    position: relative;
+    margin: 3rem auto;
+}
+
+.temp_form input[type="text"] {
+    width: 100%;
+    padding: 1rem 5rem 1rem 1rem;
+    background-color: #1e202b;
+    color: white;
+    outline: none;
+    border: none;
+    font-size: 1.3rem;
+    border-radius: 3rem;
+}
+
+::placeholder {
+    color: #bfc1c8;
+}
+
+.temp_form input[type="submit"] {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    bottom: 5px;
+    border: none;
+    background: #009ad8;
+    color: white;
+    font-size: 1.3rem;
+    border-radius: 3rem;
+    width: 15%;
+}
+
+.temp_form input[type="submit"]:hover {
+    color: #009ad8;
+    background-color: #fff;
+}
+
+.tempInfo {
+    width: 100%;
+    height: 20rem;
+    margin: auto;
+    background-color: #323544;
+    border-radius: 1rem;
+    padding: 1rem;
+    font-family: "Roboto", sans-serif;
+    margin-bottom: 20px;
+}
+
+.top_layer {
+    width: 100%;
+    height: 20%;
+    background-color: #2d303d;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 1rem;
+}
+
+.top_layer p {
+    font-size: 2rem;
+    color: #fff;
+    font-weight: 300;
+    padding: 2rem;
+}
+
+.main_layer {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+}
+
+.main_layer #city_name {
+    color: #bfc1c8;
+    font-weight: 300;
+    font-size: 2rem;
+}
+
+.main_layer .middle_layer {
+    color: #fff;
+    display: flex;
+    justify-content: space-around;
+}
+
+.main_layer .middle_layer p,
+.main_layer .middle_layer .fa {
+    font-size: 4rem;
+    font-weight: 900;
+}
+
+.fa {
+    color: #009ad8
+}
+
+.data_hide {
+    visibility: hidden;
+    transition: all 0.3s linear;
+}
+
+@media (max-width: 980px) {
+    .temp_form input[type="submit"] {
+        width: 25%;
+    }
+}
+
+@media (max-width: 540px) {
+    .temp_form {
+        width: 80%;
+    }
+
+    ::placeholder {
+        font-size: 15px;
+    }
+
+}
+
+@media (max-width: 420px) {
+    .temp_form {
+        width: 100%;
+    }
+
+    .temp_form input[type="submit"] {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 472px) {
+    .tempInfo {
+        height: 15rem;
+    }
+
+    .main_layer {
+        align-items: center;
+    }
+
+    .top_layer p {
+        font-size: 1rem;
+        padding: 0rem;
+        margin: 0px 5px;
+    }
+
+    .main_layer #city_name {
+        font-weight: 300;
+        font-size: 1rem;
+    }
+
+    .main_layer .middle_layer p,
+    .main_layer .middle_layer .fa {
+        font-size: 1.3rem;
+        font-weight: 900;
+    }
+
+    .tempInfo .main_layer .middle_layer #temp_status{
+        margin-left: 8px;
+    }
+}
+
+/* Footer */
+
+footer {
+    width: 100%;
+    background-color: var(--main-bg);
+    margin-top: auto;
+}
+
+footer p {
+    text-align: center;
+    color: #fff;
+    padding: 1rem;
+    font-size: 1.4rem;
+    margin-top: 20px;
+}
+
+/* About */
+.main_header_right figure img {
+    filter: drop-shadow(0 0.5rem 1rem rgba(0, 0, 0, 1));
+    border-radius: 50%;
+}
+
+@media (max-width: 500px) {
+    .image-size {
+        height: 15em;
+    }
+
+    footer p {
+        font-size: 0.8rem;
+        padding: 0.5rem;
+    }
+
+    .navbar a {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 768px) {
+    .main_header_left {
+        align-items: center;
+        margin-top: 40px;
+    }
+
+    .main_header_left p {
+        text-align: center;
+    }
+
+    .main_header_left h1 {
+        text-align: center;
+    }
+
+    .main_header_left button {
+        font-size: 1rem;
+    }
+
+    .aboutbtn {
+        margin-bottom: 40px;
+    }
+
+    .page404 {
+        margin-top: 40px;
+    }
+
+    .page404 h1 {
+        text-align: center;
+    }
+
+    .page404 button {
+        font-size: 1rem;
+        margin-bottom: 40px;
+    }
+}
