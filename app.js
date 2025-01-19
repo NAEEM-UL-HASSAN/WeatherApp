@@ -3,9 +3,9 @@ const app = express();
 const path = require('path');
 const hbs = require('hbs');
 
-const staticPath = path.join(__dirname, '../public');
-const viewspath = path.join(__dirname, '../templates/views');
-const partials = path.join(__dirname, '../templates/partials');
+const staticPath = path.join(__dirname, './public');
+const viewspath = path.join(__dirname, './templates/views');
+const partials = path.join(__dirname, './templates/partials');
 
 app.set('view engine', 'hbs')
 app.set('views', viewspath);
@@ -27,7 +27,7 @@ app.get('*', (req, res) => {
     });
 });
 
-app.listen(8000, () => {
+app.listen(3000, () => {
     console.log('Server started!');
 
 });
